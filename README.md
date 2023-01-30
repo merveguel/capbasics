@@ -23,3 +23,5 @@ File or Folder | Purpose
 ## Learn More
 
 Learn more at https://cap.cloud.sap/docs/get-started/.
+
+merveguel ** Contains domain model and data : /db/data /db/schema.cds and service : /srv/cap-service.cds changes
