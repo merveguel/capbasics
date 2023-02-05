@@ -29,7 +29,7 @@ annotate CompanyService.Departments with @(
         }
     ]},
 
-    // Department Object Page Details Tab
+    // Department Object Page - Department Details Tab
     UI.FieldGroup #GeneratedGroup3: {
         $Type: 'UI.FieldGroupType',
         Data : [
