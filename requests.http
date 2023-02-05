@@ -1,0 +1,19 @@
+### Create Company
+
+POST http://localhost:4004/odata/v4/CompanyService/Companies
+Content-Type: application/json
+
+{
+  "ID": "300",
+  "name": "From requests.http",
+  "industry_ID": "000014",
+  "department": [
+    {
+      "department_ID": "0113",
+    }
+  ]
+}
+
+### Read Company
+GET http://localhost:4004/odata/v4/CompanyService/Companies
+Accept: application/json

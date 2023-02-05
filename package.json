@@ -10,9 +10,14 @@
     "express": "^4"
   },
   "devDependencies": {
+    "@sap/ux-specification": "^1.102.15",
     "sqlite3": "^5.0.4"
   },
   "scripts": {
-    "start": "cds run"
-  }
+    "start": "cds run",
+    "watch-companies": "cds watch --open companies/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "sapux": [
+    "app/companies"
+  ]
 }

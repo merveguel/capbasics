@@ -6,9 +6,9 @@ using { managed } from '@sap/cds/common'; // CDL : CDS Definition Language
 entity Companies : managed {
     key ID  : Integer;
     name            : String(100); 
-    foundingDate    : Timestamp;
+    foundingDate    : Date;
     industry        : Association to Industries;
-    department      : Association to many Departments on department.company = $self;
+    department      : Composition of many Departments on department.company = $self;
     //department      : Association to Departments;
 }
 
@@ -26,8 +26,7 @@ entity Industries : managed {
     QUESTION: Shouldnt that be a separate CDS view only for relations where this CDS View only contains the Department data and not have any duplications??? */
 entity Departments : managed {
     key ID              : Integer;
+    key company         : Association to Companies;
     name                : String(100);
     description         : String;
-    company             : Association to Companies;
-    //company         : Association to many Companies on company.department = $self;
 }
