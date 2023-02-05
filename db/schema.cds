@@ -4,9 +4,10 @@ using { managed } from '@sap/cds/common'; // CDL : CDS Definition Language
 /*  One Company can be assigned to only one Industry while one Industry can be assigned to many Companies 
     One Company can be assigned to many Departments and one Department can be assigned to many Companies */
 entity Companies : managed {
-    key ID  : Integer;
+    key ID          : Integer;
     name            : String(100); 
     foundingDate    : Date;
+    size            : String(5);
     industry        : Association to Industries;
     department      : Composition of many Departments on department.company = $self;
     //department      : Association to Departments;
@@ -15,7 +16,7 @@ entity Companies : managed {
 /*  One Company can only have one industry while One Industry can be assigned to many Companies
     One to many relation from the property company's (which refers to the entity Companies) industry property back to $self which is the entity Industries */
 entity Industries : managed {
-    key ID : Integer;
+    key ID          : Integer;
     name            : String(100);
     description     : String;
     company         : Association to many Companies on company.industry = $self;
