@@ -47,6 +47,16 @@ annotate CompanyService.Departments with @(
                 $Type: 'UI.DataField',
                 Label: 'Description',
                 Value: description
+            },
+            {
+                $Type: 'UI.DataField',
+                Label: 'Created At',
+                Value: createdAt            // from aspect "managed" 
+            },
+            {
+                $Type: 'UI.DataField',
+                Label: 'Created By',
+                Value: createdBy            // from aspect "managed"
             }
         ]
     },
